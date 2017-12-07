@@ -1,5 +1,6 @@
 package br.com.ohbiker.placarapp;
 
+import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.TextureView;
@@ -38,9 +39,25 @@ public class GameActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "houve erro nessa bagaça", Toast.LENGTH_SHORT).show();
         }
-
-
+        /*
+        if (savedInstanceState != null) {
+            nbrCasa.setText(savedInstanceState.getString("nbrCasa"));
+            nbrVisitante.setText(savedInstanceState.getString("nbrVisitante"));
+        }
+        */
     }
+/*
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putString("txtCasa", txtCasa.getText().toString());
+        outState.putString("txtVisitante", txtVisitante.getText().toString());
+
+        outState.putString("nbrPontoCasa", nbrCasa.getText().toString());
+        outState.putString("nbrPontoVisitante", nbrVisitante.getText().toString());
+    }
+*/
 
     public void onGolCasa(View v) {
 
